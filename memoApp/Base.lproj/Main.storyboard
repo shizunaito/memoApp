@@ -46,10 +46,10 @@
             </objects>
             <point key="canvasLocation" x="926" y="19"/>
         </scene>
-        <!--View Controller-->
+        <!--New Task View Controller-->
         <scene sceneID="2Py-Y4-KzU">
             <objects>
-                <viewController id="uHg-zz-c8t" sceneMemberID="viewController">
+                <viewController id="uHg-zz-c8t" customClass="NewTaskViewController" customModule="memoApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="X40-tE-YLs">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -76,6 +76,9 @@
                                         <state key="normal" title="×">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="closeButtonTapped:" destination="uHg-zz-c8t" eventType="touchUpInside" id="edc-en-u8c"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.20000000000000001" green="0.59999999999999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>

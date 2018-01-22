@@ -91,15 +91,53 @@
                                     <constraint firstAttribute="trailing" secondItem="Fg0-Ck-ktU" secondAttribute="trailing" constant="8" id="zJu-sd-edj"/>
                                 </constraints>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8BK-vz-1l3">
+                                <rect key="frame" x="16" y="89" width="343" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="F31-A4-ctK"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JEp-2L-urk">
+                                <rect key="frame" x="16" y="129" width="343" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="kPA-Gf-5lK"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fWk-nO-8PG">
+                                <rect key="frame" x="90" y="183" width="195" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="Add Task">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="addButtonTapped:" destination="uHg-zz-c8t" eventType="touchUpInside" id="OR6-E2-HNU"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="nho-Ud-JBY" firstAttribute="leading" secondItem="rTD-ZZ-BuH" secondAttribute="leading" id="0S8-N9-Z6E"/>
+                            <constraint firstItem="8BK-vz-1l3" firstAttribute="top" secondItem="nho-Ud-JBY" secondAttribute="bottom" constant="25" id="WbN-fW-lBe"/>
+                            <constraint firstItem="JEp-2L-urk" firstAttribute="leading" secondItem="rTD-ZZ-BuH" secondAttribute="leading" constant="16" id="dG6-4y-Lfx"/>
                             <constraint firstItem="nho-Ud-JBY" firstAttribute="top" secondItem="X40-tE-YLs" secondAttribute="top" id="fUa-L4-Tap"/>
+                            <constraint firstItem="rTD-ZZ-BuH" firstAttribute="trailing" secondItem="8BK-vz-1l3" secondAttribute="trailing" constant="16" id="jRY-zR-GK3"/>
+                            <constraint firstItem="JEp-2L-urk" firstAttribute="top" secondItem="8BK-vz-1l3" secondAttribute="bottom" constant="19" id="k8V-TD-bh6"/>
+                            <constraint firstItem="8BK-vz-1l3" firstAttribute="leading" secondItem="rTD-ZZ-BuH" secondAttribute="leading" constant="16" id="kQa-h4-7Ay"/>
+                            <constraint firstItem="rTD-ZZ-BuH" firstAttribute="trailing" secondItem="JEp-2L-urk" secondAttribute="trailing" constant="16" id="u1e-E5-P0V"/>
                             <constraint firstItem="nho-Ud-JBY" firstAttribute="trailing" secondItem="rTD-ZZ-BuH" secondAttribute="trailing" id="xdF-NE-PfG"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="rTD-ZZ-BuH"/>
                     </view>
+                    <connections>
+                        <outlet property="addButton" destination="fWk-nO-8PG" id="jYN-TR-iMz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZTg-6e-QBu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

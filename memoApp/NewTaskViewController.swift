@@ -9,6 +9,8 @@
 import UIKit
 
 class NewTaskViewController: UIViewController {
+    
+    @IBOutlet weak var addButton: UIButton!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,5 +25,8 @@ class NewTaskViewController: UIViewController {
     
     @IBAction func closeButtonTapped(_ sender: Any) {
         dismiss(animated: true, completion: nil)
+    }
+
+    @IBAction func addButtonTapped(_ sender: Any) {
     }
 }

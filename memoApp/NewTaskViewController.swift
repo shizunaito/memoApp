@@ -15,7 +15,9 @@ class NewTaskViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        addButton.layer.cornerRadius = 10.0
+        addButton.layer.borderWidth = 2.0
+        addButton.layer.borderColor = UIColor.gray.cgColor
     }
 
     override func didReceiveMemoryWarning() {

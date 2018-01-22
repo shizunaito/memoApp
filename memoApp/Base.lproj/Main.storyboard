@@ -109,10 +109,13 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fWk-nO-8PG">
-                                <rect key="frame" x="90" y="183" width="195" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fWk-nO-8PG">
+                                <rect key="frame" x="90" y="183" width="195" height="62"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="195" id="dv0-ya-NJ2"/>
+                                    <constraint firstAttribute="height" constant="62" id="uqg-sr-URT"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="Add Task">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
@@ -125,12 +128,14 @@
                         <constraints>
                             <constraint firstItem="nho-Ud-JBY" firstAttribute="leading" secondItem="rTD-ZZ-BuH" secondAttribute="leading" id="0S8-N9-Z6E"/>
                             <constraint firstItem="8BK-vz-1l3" firstAttribute="top" secondItem="nho-Ud-JBY" secondAttribute="bottom" constant="25" id="WbN-fW-lBe"/>
+                            <constraint firstItem="fWk-nO-8PG" firstAttribute="centerX" secondItem="rTD-ZZ-BuH" secondAttribute="centerX" id="Xh6-wm-x3X"/>
                             <constraint firstItem="JEp-2L-urk" firstAttribute="leading" secondItem="rTD-ZZ-BuH" secondAttribute="leading" constant="16" id="dG6-4y-Lfx"/>
                             <constraint firstItem="nho-Ud-JBY" firstAttribute="top" secondItem="X40-tE-YLs" secondAttribute="top" id="fUa-L4-Tap"/>
                             <constraint firstItem="rTD-ZZ-BuH" firstAttribute="trailing" secondItem="8BK-vz-1l3" secondAttribute="trailing" constant="16" id="jRY-zR-GK3"/>
                             <constraint firstItem="JEp-2L-urk" firstAttribute="top" secondItem="8BK-vz-1l3" secondAttribute="bottom" constant="19" id="k8V-TD-bh6"/>
                             <constraint firstItem="8BK-vz-1l3" firstAttribute="leading" secondItem="rTD-ZZ-BuH" secondAttribute="leading" constant="16" id="kQa-h4-7Ay"/>
                             <constraint firstItem="rTD-ZZ-BuH" firstAttribute="trailing" secondItem="JEp-2L-urk" secondAttribute="trailing" constant="16" id="u1e-E5-P0V"/>
+                            <constraint firstItem="fWk-nO-8PG" firstAttribute="top" secondItem="JEp-2L-urk" secondAttribute="bottom" constant="24" id="vph-6I-nQ0"/>
                             <constraint firstItem="nho-Ud-JBY" firstAttribute="trailing" secondItem="rTD-ZZ-BuH" secondAttribute="trailing" id="xdF-NE-PfG"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="rTD-ZZ-BuH"/>

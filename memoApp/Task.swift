@@ -15,19 +15,28 @@ class Task: Object {
     @objc dynamic var detail = ""
     @objc dynamic var status = 0
     @objc dynamic var deadline: Date? = nil
-    
+
     let tag = RealmOptional<Int>()
-    
+
     override static func primaryKey() -> String? {
         return "id"
     }
-    
+
     override static func indexedProperties() -> [String] {
         return ["status"]
     }
-    
-    // TODO: 引数の渡し方がイマイチなので考えたい
-    static func createOrUpdate(realm: Realm, with value: [String : Any]) -> Task {
-        return realm.create(self, value: value, update: true)
+
+    static func save(id: Int, title: String, detail: String = "", status: Int = 0, deadline: Date?) {
+        let value: [String : Any] = [
+            "id" : id,
+            "title" : title,
+            "detail" : detail,
+            "status" : status
+        ]
+
+        let realm = try! Realm()
+        try! realm.write {
+            realm.create(self, value: value, update: true)
+        }
     }
 }

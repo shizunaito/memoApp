@@ -142,6 +142,7 @@
                     </view>
                     <connections>
                         <outlet property="addButton" destination="fWk-nO-8PG" id="jYN-TR-iMz"/>
+                        <outlet property="titleTextField" destination="JEp-2L-urk" id="TDL-h0-8tO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZTg-6e-QBu" userLabel="First Responder" sceneMemberID="firstResponder"/>

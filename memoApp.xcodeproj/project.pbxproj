@@ -117,10 +117,8 @@
 				054FEE9F20133077000ED097 /* AppDelegate.swift */,
 				054FEEA120133077000ED097 /* ViewController.swift */,
 				05A0B08E201610E1008962B2 /* Task.swift */,
-				056C4C672018AA6300B6C173 /* ToDoTableViewCell.swift */,
-				056C4C6B2018ABFE00B6C173 /* ToDoTableViewController.swift */,
-				056C4C682018AA6300B6C173 /* ToDoTableViewCell.xib */,
 				05A0B0902016339F008962B2 /* NewTaskViewController.swift */,
+				056C4C6D2018B92000B6C173 /* ToDo */,
 				054FEEA320133077000ED097 /* Main.storyboard */,
 				054FEEA620133077000ED097 /* Assets.xcassets */,
 				054FEEA820133077000ED097 /* LaunchScreen.storyboard */,
@@ -154,6 +152,16 @@
 				054FEECE201395FB000ED097 /* RealmSwift.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		056C4C6D2018B92000B6C173 /* ToDo */ = {
+			isa = PBXGroup;
+			children = (
+				056C4C6B2018ABFE00B6C173 /* ToDoTableViewController.swift */,
+				056C4C672018AA6300B6C173 /* ToDoTableViewCell.swift */,
+				056C4C682018AA6300B6C173 /* ToDoTableViewCell.xib */,
+			);
+			path = ToDo;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

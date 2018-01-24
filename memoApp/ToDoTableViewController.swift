@@ -7,19 +7,31 @@
 //
 
 import UIKit
+import RealmSwift
 
 class ToDoTableViewController: UITableViewController {
+
+    private var tasks: Results<Task>?
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.tableView.register(UINib(nibName: "ToDoTableViewCell", bundle: nil), forCellReuseIdentifier: "toDoTableViewCell")
+        tableView.register(UINib(nibName: "ToDoTableViewCell", bundle: nil), forCellReuseIdentifier: "toDoTableViewCell")
+
+        let realm = try! Realm()
+        tasks = realm.objects(Task.self)
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+
+        tableView.reloadData()
     }
 
     override func didReceiveMemoryWarning() {
@@ -33,13 +45,15 @@ class ToDoTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return tasks?.count ?? 0
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "toDoTableViewCell", for: indexPath) as? ToDoTableViewCell else {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "toDoTableViewCell", for: indexPath) as? ToDoTableViewCell, let tasks = tasks else {
             return UITableViewCell()
         }
+
+        cell.titleLabel.text = tasks[indexPath.row].title
 
         return cell
     }

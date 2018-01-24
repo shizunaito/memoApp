@@ -31,10 +31,64 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <segue destination="naG-UB-cku" kind="show" id="jfB-Sv-SD2"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W2v-HV-Rfl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="926" y="19"/>
+        </scene>
+        <!--Task View Controller-->
+        <scene sceneID="ah1-Li-vGi">
+            <objects>
+                <viewController id="naG-UB-cku" customClass="TaskViewController" customModule="memoApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gnN-eC-aA3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oni-mz-Mg8">
+                                <rect key="frame" x="16" y="88" width="343" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="i8r-Xz-old"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AgR-Yt-U1H">
+                                <rect key="frame" x="90" y="310" width="195" height="62"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="62" id="6hy-lD-pcw"/>
+                                    <constraint firstAttribute="width" constant="195" id="7oo-vv-C7w"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="Delete Task">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="deleteButtonTapped:" destination="naG-UB-cku" eventType="touchUpInside" id="2d6-or-42q"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="oni-mz-Mg8" firstAttribute="top" secondItem="c0y-P9-ftf" secondAttribute="top" constant="24" id="2jr-JI-y30"/>
+                            <constraint firstItem="c0y-P9-ftf" firstAttribute="trailing" secondItem="oni-mz-Mg8" secondAttribute="trailing" constant="16" id="GZy-xc-K0B"/>
+                            <constraint firstItem="oni-mz-Mg8" firstAttribute="leading" secondItem="c0y-P9-ftf" secondAttribute="leading" constant="16" id="Mov-tL-iw2"/>
+                            <constraint firstItem="AgR-Yt-U1H" firstAttribute="centerY" secondItem="c0y-P9-ftf" secondAttribute="centerY" id="k0V-mt-fzB"/>
+                            <constraint firstItem="AgR-Yt-U1H" firstAttribute="centerX" secondItem="c0y-P9-ftf" secondAttribute="centerX" id="ozl-g7-sLg"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="c0y-P9-ftf"/>
+                    </view>
+                    <connections>
+                        <outlet property="deleteButton" destination="AgR-Yt-U1H" id="RRK-rt-5lj"/>
+                        <outlet property="titleLabel" destination="oni-mz-Mg8" id="ooS-Cv-vFe"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kRe-dA-Xlc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1789.5999999999999" y="17.541229385307346"/>
         </scene>
         <!--New Task View Controller-->
         <scene sceneID="2Py-Y4-KzU">
@@ -137,7 +191,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZTg-6e-QBu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1704.8" y="17.541229385307346"/>
+            <point key="canvasLocation" x="1791" y="-728"/>
         </scene>
         <!--ToDo-->
         <scene sceneID="PNk-jj-MPQ">
@@ -188,7 +242,7 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="O9l-9l-Sea" id="34a-f7-5dF">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>

@@ -16,6 +16,9 @@
 		054FEEC020133078000ED097 /* memoAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054FEEBF20133078000ED097 /* memoAppUITests.swift */; };
 		054FEED0201395FB000ED097 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 054FEECE201395FB000ED097 /* RealmSwift.framework */; };
 		054FEED1201395FB000ED097 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 054FEECF201395FB000ED097 /* Realm.framework */; };
+		056C4C692018AA6300B6C173 /* ToDoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 056C4C672018AA6300B6C173 /* ToDoTableViewCell.swift */; };
+		056C4C6A2018AA6300B6C173 /* ToDoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 056C4C682018AA6300B6C173 /* ToDoTableViewCell.xib */; };
+		056C4C6C2018ABFE00B6C173 /* ToDoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 056C4C6B2018ABFE00B6C173 /* ToDoTableViewController.swift */; };
 		05A0B08F201610E1008962B2 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A0B08E201610E1008962B2 /* Task.swift */; };
 		05A0B0912016339F008962B2 /* NewTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A0B0902016339F008962B2 /* NewTaskViewController.swift */; };
 /* End PBXBuildFile section */
@@ -53,6 +56,9 @@
 		054FEEC120133078000ED097 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		054FEECE201395FB000ED097 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = Carthage/Build/iOS/RealmSwift.framework; sourceTree = "<group>"; };
 		054FEECF201395FB000ED097 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = Carthage/Build/iOS/Realm.framework; sourceTree = "<group>"; };
+		056C4C672018AA6300B6C173 /* ToDoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoTableViewCell.swift; sourceTree = "<group>"; };
+		056C4C682018AA6300B6C173 /* ToDoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ToDoTableViewCell.xib; sourceTree = "<group>"; };
+		056C4C6B2018ABFE00B6C173 /* ToDoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoTableViewController.swift; sourceTree = "<group>"; };
 		05A0B08E201610E1008962B2 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 		05A0B0902016339F008962B2 /* NewTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTaskViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -111,6 +117,9 @@
 				054FEE9F20133077000ED097 /* AppDelegate.swift */,
 				054FEEA120133077000ED097 /* ViewController.swift */,
 				05A0B08E201610E1008962B2 /* Task.swift */,
+				056C4C672018AA6300B6C173 /* ToDoTableViewCell.swift */,
+				056C4C6B2018ABFE00B6C173 /* ToDoTableViewController.swift */,
+				056C4C682018AA6300B6C173 /* ToDoTableViewCell.xib */,
 				05A0B0902016339F008962B2 /* NewTaskViewController.swift */,
 				054FEEA320133077000ED097 /* Main.storyboard */,
 				054FEEA620133077000ED097 /* Assets.xcassets */,
@@ -258,6 +267,7 @@
 				054FEEAA20133077000ED097 /* LaunchScreen.storyboard in Resources */,
 				054FEEA720133077000ED097 /* Assets.xcassets in Resources */,
 				054FEEA520133077000ED097 /* Main.storyboard in Resources */,
+				056C4C6A2018AA6300B6C173 /* ToDoTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -301,9 +311,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				054FEEA220133077000ED097 /* ViewController.swift in Sources */,
+				056C4C6C2018ABFE00B6C173 /* ToDoTableViewController.swift in Sources */,
 				05A0B08F201610E1008962B2 /* Task.swift in Sources */,
 				05A0B0912016339F008962B2 /* NewTaskViewController.swift in Sources */,
 				054FEEA020133077000ED097 /* AppDelegate.swift in Sources */,
+				056C4C692018AA6300B6C173 /* ToDoTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

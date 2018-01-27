@@ -15,8 +15,7 @@ class ToDoTableViewController: UITableViewController {
         do{
             let realm = try Realm()
             return realm.objects(Task.self)
-        }catch{
-            print("エラー")
+        } catch {
         }
         return nil
     }

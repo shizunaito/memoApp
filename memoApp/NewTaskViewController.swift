@@ -29,7 +29,6 @@ class NewTaskViewController: UIViewController {
 
         let realm = try! Realm()
         lastId = realm.objects(Task.self).last?.id ?? -1
-        print(realm.objects(Task.self))
     }
 
     override func didReceiveMemoryWarning() {

@@ -45,6 +45,6 @@ class NewTaskViewController: UIViewController {
             Task.save(id: lastId + 1,title: text, deadline: nil)
         }
 
-        titleTextField.text = ""
+        dismiss(animated: true, completion: nil)
     }
 }

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import RealmSwift
 
 class TaskViewController: UIViewController {
     
@@ -31,7 +32,18 @@ class TaskViewController: UIViewController {
     }
     
     @IBAction func deleteButtonTapped(_ sender: UIButton) {
-        
+        guard let task = task else {
+            return
+        }
+        do {
+            let realm = try Realm()
+            try realm.write {
+                realm.delete(task)
+                navigationController?.popViewController(animated: true)
+            }
+        } catch {
+            
+        }
     }
     
     /*

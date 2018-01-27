@@ -11,15 +11,20 @@ import RealmSwift
 
 class ToDoTableViewController: UITableViewController {
 
-    private var tasks: Results<Task>?
+    private var tasks: Results<Task>?{
+        do{
+            let realm = try Realm()
+            return realm.objects(Task.self)
+        }catch{
+            print("エラー")
+        }
+        return nil
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         tableView.register(UINib(nibName: "ToDoTableViewCell", bundle: nil), forCellReuseIdentifier: "toDoTableViewCell")
-
-        let realm = try! Realm()
-        tasks = realm.objects(Task.self)
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -54,7 +59,6 @@ class ToDoTableViewController: UITableViewController {
         }
 
         cell.titleLabel.text = tasks[indexPath.row].title
-
         return cell
     }
 
@@ -92,15 +96,21 @@ class ToDoTableViewController: UITableViewController {
         return true
     }
     */
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 
-    /*
+        performSegue(withIdentifier: "toTaskViewController", sender: indexPath.row)
+    }
+
     // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        switch segue.destination {
+        case let taskVC as TaskViewController:
+            guard let row = sender as? Int else { break }
+            taskVC.task = tasks?[row]
+        default:
+            break
+        }
     }
-    */
-
 }

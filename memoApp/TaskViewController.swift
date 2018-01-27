@@ -9,6 +9,8 @@
 import UIKit
 
 class TaskViewController: UIViewController {
+    
+    var task: Task?
 
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var deleteButton: UIButton!
@@ -16,6 +18,7 @@ class TaskViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        titleLabel.text = task?.title ?? ""
         // Do any additional setup after loading the view.
     }
 

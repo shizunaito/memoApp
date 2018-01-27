@@ -32,7 +32,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <segue destination="naG-UB-cku" kind="show" id="jfB-Sv-SD2"/>
+                        <segue destination="naG-UB-cku" kind="show" identifier="toTaskViewController" id="jfB-Sv-SD2"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W2v-HV-Rfl" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -83,7 +83,7 @@
                     </view>
                     <connections>
                         <outlet property="deleteButton" destination="AgR-Yt-U1H" id="RRK-rt-5lj"/>
-                        <outlet property="titleLabel" destination="oni-mz-Mg8" id="ooS-Cv-vFe"/>
+                        <outlet property="titleLabel" destination="oni-mz-Mg8" id="zfG-33-0no"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kRe-dA-Xlc" userLabel="First Responder" sceneMemberID="firstResponder"/>

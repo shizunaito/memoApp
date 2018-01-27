@@ -7,14 +7,19 @@
 //
 
 import UIKit
+import RealmSwift
 
 class ToDoTableViewCell: UITableViewCell {
     
     @IBOutlet weak var checkButton: UIButton!
     @IBOutlet weak var titleLabel: UILabel!
     
+    var task: Task?
+    
     override func awakeFromNib() {
         super.awakeFromNib()
+        
+        titleLabel.text = task?.title
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

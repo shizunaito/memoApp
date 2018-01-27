@@ -19,7 +19,10 @@ class TaskViewController: UIViewController {
         super.viewDidLoad()
 
         titleLabel.text = task?.title ?? ""
-        // Do any additional setup after loading the view.
+        
+        deleteButton.layer.cornerRadius = 10.0
+        deleteButton.layer.borderWidth = 2.0
+        deleteButton.layer.borderColor = UIColor.gray.cgColor
     }
 
     override func didReceiveMemoryWarning() {
@@ -28,6 +31,7 @@ class TaskViewController: UIViewController {
     }
     
     @IBAction func deleteButtonTapped(_ sender: UIButton) {
+        
     }
     
     /*

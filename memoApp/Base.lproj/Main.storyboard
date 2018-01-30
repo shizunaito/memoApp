@@ -24,7 +24,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="ToDo" largeTitleDisplayMode="never" id="8Th-Yl-wjR">
-                        <barButtonItem key="rightBarButtonItem" title="＋" id="agm-2q-Og9">
+                        <barButtonItem key="rightBarButtonItem" image="plus" id="agm-2q-Og9">
                             <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
                                 <segue destination="uHg-zz-c8t" kind="presentation" id="Cqo-g3-3z2"/>
@@ -272,9 +272,10 @@
     </scenes>
     <resources>
         <image name="done" width="25" height="25"/>
+        <image name="plus" width="24" height="24"/>
         <image name="todo" width="25" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="r3B-VQ-hN8"/>
+        <segue reference="jfB-Sv-SD2"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -7,12 +7,18 @@
 //
 
 import UIKit
+import RealmSwift
 
 class DoneTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var titleLabel: UILabel!
+
+    var task: Task?
+
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+
+        titleLabel.text = task?.title
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

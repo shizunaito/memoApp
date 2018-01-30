@@ -7,17 +7,35 @@
 //
 
 import UIKit
+import RealmSwift
 
 class DoneTableViewController: UITableViewController {
 
+    private var tasks: Results<Task>?{
+        do{
+            let realm = try Realm()
+            return realm.objects(Task.self).filter("status = 1")
+        } catch {
+        }
+        return nil
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        tableView.register(UINib(nibName: "DoneTableViewCell", bundle: nil), forCellReuseIdentifier: "doneTableViewCell")
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+
+        tableView.reloadData()
     }
 
     override func didReceiveMemoryWarning() {
@@ -29,23 +47,24 @@ class DoneTableViewController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return tasks?.count ?? 0
     }
 
-    /*
+
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "doneTableViewCell", for: indexPath) as? DoneTableViewCell, let tasks = tasks else {
+            return UITableViewCell()
+        }
 
-        // Configure the cell...
-
+        cell.titleLabel.text = tasks[indexPath.row].title
         return cell
     }
-    */
+
 
     /*
     // Override to support conditional editing of the table view.

@@ -57,6 +57,7 @@ class ToDoTableViewController: UITableViewController {
             return UITableViewCell()
         }
 
+        cell.task = tasks[indexPath.row]
         cell.titleLabel.text = tasks[indexPath.row].title
         return cell
     }

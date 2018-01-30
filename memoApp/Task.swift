@@ -46,4 +46,11 @@ class Task: Object {
             realm.delete(task)
         }
     }
+
+    static func done(id: Int) {
+        let realm = try! Realm()
+        try! realm.write {
+            realm.create(Task.self, value: ["id": id, "status": 1], update: true)
+        }
+    }
 }

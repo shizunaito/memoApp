@@ -18,7 +18,7 @@ class ToDoTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        
+
         titleLabel.text = task?.title
     }
 
@@ -27,5 +27,9 @@ class ToDoTableViewCell: UITableViewCell {
     }
     
     @IBAction func checkButtonTapped(_ sender: UIButton) {
+        guard let task = task else {
+            return
+        }
+        Task.done(id: task.id)
     }
 }

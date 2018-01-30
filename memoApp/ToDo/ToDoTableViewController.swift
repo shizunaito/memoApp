@@ -14,7 +14,7 @@ class ToDoTableViewController: UITableViewController {
     private var tasks: Results<Task>?{
         do{
             let realm = try Realm()
-            return realm.objects(Task.self)
+            return realm.objects(Task.self).filter("status = 0")
         } catch {
         }
         return nil

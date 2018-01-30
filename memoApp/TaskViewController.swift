@@ -35,15 +35,9 @@ class TaskViewController: UIViewController {
         guard let task = task else {
             return
         }
-        do {
-            let realm = try Realm()
-            try realm.write {
-                realm.delete(task)
-                navigationController?.popViewController(animated: true)
-            }
-        } catch {
-            
-        }
+
+        Task.delete(task: task)
+        navigationController?.popViewController(animated: true)
     }
     
     /*

@@ -39,4 +39,11 @@ class Task: Object {
             realm.create(self, value: value, update: true)
         }
     }
+
+    static func delete(task: Task) {
+        let realm = try! Realm()
+        try! realm.write {
+            realm.delete(task)
+        }
+    }
 }

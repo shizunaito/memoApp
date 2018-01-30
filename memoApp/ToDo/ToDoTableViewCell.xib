@@ -19,13 +19,14 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="59.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HYM-tt-TvD">
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HYM-tt-TvD">
                         <rect key="frame" x="6" y="15" width="30" height="30"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="30" id="X6T-E9-GeK"/>
                             <constraint firstAttribute="height" constant="30" id="yLP-p6-4dx"/>
                         </constraints>
-                        <state key="normal" title="D"/>
+                        <state key="normal" image="uncheck"/>
+                        <state key="selected" image="check"/>
                         <connections>
                             <action selector="checkButtonTapped:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="W8P-KV-og7"/>
                         </connections>
@@ -55,4 +56,8 @@
             </connections>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="check" width="24" height="24"/>
+        <image name="uncheck" width="24" height="24"/>
+    </resources>
 </document>

@@ -197,7 +197,7 @@
         <scene sceneID="PNk-jj-MPQ">
             <objects>
                 <navigationController id="4Fq-wK-PgU" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="ToDo" id="yXN-VC-YAX"/>
+                    <tabBarItem key="tabBarItem" title="ToDo" image="todo" id="yXN-VC-YAX"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="opY-pg-qe8">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -255,7 +255,7 @@
         <scene sceneID="lxn-62-Usc">
             <objects>
                 <navigationController id="CXc-Kl-VHo" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Done" id="bcA-ej-Gde"/>
+                    <tabBarItem key="tabBarItem" title="Done" image="done" id="bcA-ej-Gde"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="HBK-WW-gZD">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -270,6 +270,10 @@
             <point key="canvasLocation" x="113" y="730"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="done" width="25" height="25"/>
+        <image name="todo" width="25" height="25"/>
+    </resources>
     <inferredMetricsTieBreakers>
         <segue reference="r3B-VQ-hN8"/>
     </inferredMetricsTieBreakers>

@@ -88,7 +88,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kRe-dA-Xlc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1789.5999999999999" y="17.541229385307346"/>
+            <point key="canvasLocation" x="1927" y="357"/>
         </scene>
         <!--New Task View Controller-->
         <scene sceneID="2Py-Y4-KzU">
@@ -232,27 +232,20 @@
         <!--Done-->
         <scene sceneID="2ve-TB-M2R">
             <objects>
-                <tableViewController id="WL6-SR-xbj" sceneMemberID="viewController">
+                <tableViewController id="WL6-SR-xbj" customClass="DoneTableViewController" customModule="memoApp" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="zcF-wd-JfX">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="O9l-9l-Sea">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="O9l-9l-Sea" id="34a-f7-5dF">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
                         <connections>
                             <outlet property="dataSource" destination="WL6-SR-xbj" id="W0c-Gp-BEx"/>
                             <outlet property="delegate" destination="WL6-SR-xbj" id="tN2-9X-onz"/>
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Done" largeTitleDisplayMode="never" id="KqQ-eC-iqz"/>
+                    <connections>
+                        <segue destination="naG-UB-cku" kind="show" identifier="toTaskViewController" id="r3B-VQ-hN8"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="phI-f4-Iie" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -277,4 +270,7 @@
             <point key="canvasLocation" x="113" y="730"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="r3B-VQ-hN8"/>
+    </inferredMetricsTieBreakers>
 </document>

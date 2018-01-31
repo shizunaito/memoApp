@@ -1,1 +1,2 @@
-github "realm/realm-cocoa" "b4d8d7c3c3fe97aaf7940a05b97d1458ea5e832f"
+github "ReactiveX/RxSwift" "4.1.1"
+github "realm/realm-cocoa" "6babc9308888d5439f4dac4467289357e7fab96c"

@@ -25,6 +25,8 @@
 		05A35D2B202094A50041B43A /* DoneTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A35D2A202094A50041B43A /* DoneTableViewController.swift */; };
 		05A35D30202094C90041B43A /* DoneTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A35D2E202094C90041B43A /* DoneTableViewCell.swift */; };
 		05A35D31202094C90041B43A /* DoneTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 05A35D2F202094C90041B43A /* DoneTableViewCell.xib */; };
+		05E9554A20220F8A003DE0C5 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05E9554820220F8A003DE0C5 /* RxCocoa.framework */; };
+		05E9554B20220F8A003DE0C5 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05E9554920220F8A003DE0C5 /* RxSwift.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +71,8 @@
 		05A35D2A202094A50041B43A /* DoneTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoneTableViewController.swift; sourceTree = "<group>"; };
 		05A35D2E202094C90041B43A /* DoneTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoneTableViewCell.swift; sourceTree = "<group>"; };
 		05A35D2F202094C90041B43A /* DoneTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DoneTableViewCell.xib; sourceTree = "<group>"; };
+		05E9554820220F8A003DE0C5 /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
+		05E9554920220F8A003DE0C5 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +80,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				05E9554A20220F8A003DE0C5 /* RxCocoa.framework in Frameworks */,
+				05E9554B20220F8A003DE0C5 /* RxSwift.framework in Frameworks */,
 				054FEED0201395FB000ED097 /* RealmSwift.framework in Frameworks */,
 				054FEED1201395FB000ED097 /* Realm.framework in Frameworks */,
 			);
@@ -158,6 +164,8 @@
 		054FEECD201395FA000ED097 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				05E9554820220F8A003DE0C5 /* RxCocoa.framework */,
+				05E9554920220F8A003DE0C5 /* RxSwift.framework */,
 				054FEECF201395FB000ED097 /* Realm.framework */,
 				054FEECE201395FB000ED097 /* RealmSwift.framework */,
 			);
@@ -325,6 +333,8 @@
 			inputPaths = (
 				"$(SRCROOT)/Carthage/Build/iOS/Realm.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/RealmSwift.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RxCocoa.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RxSwift.framework",
 			);
 			outputPaths = (
 			);

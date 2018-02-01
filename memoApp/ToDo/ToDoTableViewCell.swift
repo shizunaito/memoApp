@@ -31,6 +31,5 @@ class ToDoTableViewCell: UITableViewCell {
             return
         }
         Task.done(id: task.id)
-        checkButton.setImage(UIImage(named: "check"), for: .normal)
     }
 }

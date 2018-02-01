@@ -8,6 +8,8 @@
 
 import UIKit
 import RealmSwift
+import RxSwift
+import RxCocoa
 
 class NewTaskViewController: UIViewController {
 
@@ -15,13 +17,19 @@ class NewTaskViewController: UIViewController {
     @IBOutlet weak var titleTextField: UITextField!
 
     private var lastId: Int = 0
+    private var minTitleLength = 3
+    private var disposeBag = DisposeBag()
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        addButton.layer.cornerRadius = 10.0
-        addButton.layer.borderWidth = 2.0
-        addButton.layer.borderColor = UIColor.gray.cgColor
+        addButton.setTitleColor(UIColor.lightGray, for: .disabled)
+
+        titleTextField.rx.text.orEmpty
+            .map { $0.count >= self.minTitleLength }
+            .share(replay: 1)
+            .bind(to: addButton.rx.isEnabled)
+            .disposed(by: disposeBag)
     }
 
     override func viewWillAppear(_ animated: Bool) {

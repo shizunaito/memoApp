@@ -160,9 +160,10 @@
                                     <constraint firstAttribute="height" constant="62" id="uqg-sr-URT"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <state key="normal" title="Add Task">
+                                <state key="normal" title="Add Task" backgroundImage="addTaskAble">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
+                                <state key="disabled" backgroundImage="addTaskDisable"/>
                                 <connections>
                                     <action selector="addButtonTapped:" destination="uHg-zz-c8t" eventType="touchUpInside" id="OR6-E2-HNU"/>
                                 </connections>
@@ -271,6 +272,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="addTaskAble" width="178" height="62"/>
+        <image name="addTaskDisable" width="177" height="62"/>
         <image name="done" width="25" height="25"/>
         <image name="plus" width="24" height="24"/>
         <image name="todo" width="25" height="25"/>

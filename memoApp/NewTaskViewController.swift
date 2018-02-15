@@ -35,6 +35,8 @@ class NewTaskViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
 
+        titleTextField.becomeFirstResponder()
+
         let realm = try! Realm()
         lastId = realm.objects(Task.self).last?.id ?? -1
     }

@@ -19,8 +19,19 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="59.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uWJ-oI-OFI">
+                        <rect key="frame" x="9" y="18" width="24" height="24"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="24" id="EvL-AC-vJh"/>
+                            <constraint firstAttribute="width" constant="24" id="QF9-L5-fWF"/>
+                        </constraints>
+                        <state key="normal" image="check"/>
+                        <connections>
+                            <action selector="checkButtonTapped:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="r3F-ZE-ao3"/>
+                        </connections>
+                    </button>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.69999999999999996" translatesAutoresizingMaskIntoConstraints="NO" id="iXe-rE-msT">
-                        <rect key="frame" x="16" y="19.5" width="288" height="21"/>
+                        <rect key="frame" x="41" y="19" width="263" height="21"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="21" id="YFX-CU-g0v"/>
                         </constraints>
@@ -31,14 +42,20 @@
                 </subviews>
                 <constraints>
                     <constraint firstAttribute="trailing" secondItem="iXe-rE-msT" secondAttribute="trailing" constant="16" id="VQs-Ky-dvZ"/>
-                    <constraint firstItem="iXe-rE-msT" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="WUg-ff-u42"/>
+                    <constraint firstItem="uWJ-oI-OFI" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="Vhk-1n-jeQ"/>
+                    <constraint firstItem="iXe-rE-msT" firstAttribute="leading" secondItem="uWJ-oI-OFI" secondAttribute="trailing" constant="8" id="cFa-KO-TCJ"/>
                     <constraint firstItem="iXe-rE-msT" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="tZi-aP-2Cj"/>
+                    <constraint firstItem="uWJ-oI-OFI" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="9" id="yZl-m6-1Sb"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="checkButton" destination="uWJ-oI-OFI" id="8Ek-KG-jdf"/>
                 <outlet property="titleLabel" destination="iXe-rE-msT" id="q2T-RD-SEO"/>
             </connections>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="check" width="24" height="24"/>
+    </resources>
 </document>

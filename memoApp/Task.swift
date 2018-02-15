@@ -53,4 +53,11 @@ class Task: Object {
             realm.create(Task.self, value: ["id": id, "status": 1], update: true)
         }
     }
+
+    static func todo(id: Int) {
+        let realm = try! Realm()
+        try! realm.write {
+            realm.create(Task.self, value: ["id": id, "status": 0], update: true)
+        }
+    }
 }

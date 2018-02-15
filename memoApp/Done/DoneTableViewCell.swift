@@ -12,6 +12,7 @@ import RealmSwift
 class DoneTableViewCell: UITableViewCell {
 
     @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var checkButton: UIButton!
 
     var task: Task?
 
@@ -26,5 +27,11 @@ class DoneTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-    
+
+    @IBAction func checkButtonTapped(_ sender: UIButton) {
+        guard let task = task else {
+            return
+        }
+        Task.todo(id: task.id)
+    }
 }

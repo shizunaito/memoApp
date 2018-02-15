@@ -8,6 +8,8 @@
 
 import UIKit
 import RealmSwift
+import RxSwift
+import RxCocoa
 
 class DoneTableViewController: UITableViewController {
 
@@ -19,6 +21,8 @@ class DoneTableViewController: UITableViewController {
         }
         return nil
     }
+
+    private var disposeBag = DisposeBag()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -61,7 +65,15 @@ class DoneTableViewController: UITableViewController {
             return UITableViewCell()
         }
 
+        cell.task = tasks[indexPath.row]
         cell.titleLabel.text = tasks[indexPath.row].title
+
+        cell.checkButton.rx.tap
+            .subscribe { _ in
+                tableView.reloadData()
+            }
+            .disposed(by: disposeBag)
+
         return cell
     }
 

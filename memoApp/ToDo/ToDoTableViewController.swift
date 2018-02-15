@@ -67,7 +67,7 @@ class ToDoTableViewController: UITableViewController {
         cell.checkButton.rx.tap
             .subscribe { _ in
                 tableView.reloadData()
-                }
+            }
             .disposed(by: disposeBag)
 
         return cell

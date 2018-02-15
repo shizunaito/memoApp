@@ -17,7 +17,7 @@ class NewTaskViewController: UIViewController {
     @IBOutlet weak var titleTextField: UITextField!
 
     private var lastId: Int = 0
-    private var minTitleLength = 3
+    private var minTitleLength = 1
     private var disposeBag = DisposeBag()
 
     override func viewDidLoad() {

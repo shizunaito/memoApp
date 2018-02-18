@@ -57,7 +57,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AgR-Yt-U1H">
-                                <rect key="frame" x="90" y="310" width="195" height="62"/>
+                                <rect key="frame" x="90" y="404" width="195" height="62"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="62" id="6hy-lD-pcw"/>
                                     <constraint firstAttribute="width" constant="195" id="7oo-vv-C7w"/>
@@ -70,18 +70,35 @@
                                     <action selector="deleteButtonTapped:" destination="naG-UB-cku" eventType="touchUpInside" id="2d6-or-42q"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PXA-t9-AWS">
+                                <rect key="frame" x="90" y="310" width="195" height="62"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="195" id="73P-ZX-9po"/>
+                                    <constraint firstAttribute="height" constant="62" id="ztS-0M-Gao"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="Done">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="changeStateButtonTapped:" destination="naG-UB-cku" eventType="touchUpInside" id="T2P-ug-dWJ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="PXA-t9-AWS" firstAttribute="centerX" secondItem="c0y-P9-ftf" secondAttribute="centerX" id="0A5-oZ-uKd"/>
                             <constraint firstItem="oni-mz-Mg8" firstAttribute="top" secondItem="c0y-P9-ftf" secondAttribute="top" constant="24" id="2jr-JI-y30"/>
                             <constraint firstItem="c0y-P9-ftf" firstAttribute="trailing" secondItem="oni-mz-Mg8" secondAttribute="trailing" constant="16" id="GZy-xc-K0B"/>
                             <constraint firstItem="oni-mz-Mg8" firstAttribute="leading" secondItem="c0y-P9-ftf" secondAttribute="leading" constant="16" id="Mov-tL-iw2"/>
-                            <constraint firstItem="AgR-Yt-U1H" firstAttribute="centerY" secondItem="c0y-P9-ftf" secondAttribute="centerY" id="k0V-mt-fzB"/>
+                            <constraint firstItem="PXA-t9-AWS" firstAttribute="centerY" secondItem="c0y-P9-ftf" secondAttribute="centerY" id="PeC-te-2B5"/>
+                            <constraint firstItem="AgR-Yt-U1H" firstAttribute="top" secondItem="PXA-t9-AWS" secondAttribute="bottom" constant="32" id="axI-B6-vNh"/>
                             <constraint firstItem="AgR-Yt-U1H" firstAttribute="centerX" secondItem="c0y-P9-ftf" secondAttribute="centerX" id="ozl-g7-sLg"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="c0y-P9-ftf"/>
                     </view>
                     <connections>
+                        <outlet property="changeStateButton" destination="PXA-t9-AWS" id="ORz-FP-kAZ"/>
                         <outlet property="deleteButton" destination="AgR-Yt-U1H" id="RRK-rt-5lj"/>
                         <outlet property="titleLabel" destination="oni-mz-Mg8" id="zfG-33-0no"/>
                     </connections>
@@ -279,6 +296,6 @@
         <image name="todo" width="25" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="r3B-VQ-hN8"/>
+        <segue reference="jfB-Sv-SD2"/>
     </inferredMetricsTieBreakers>
 </document>

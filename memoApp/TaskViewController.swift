@@ -15,20 +15,42 @@ class TaskViewController: UIViewController {
 
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var deleteButton: UIButton!
+    @IBOutlet weak var changeStateButton: UIButton!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         titleLabel.text = task?.title ?? ""
-        
+        if task?.status == 1 {
+            changeStateButton.setTitle("ToDo", for: .normal)
+        }
+
         deleteButton.layer.cornerRadius = 10.0
         deleteButton.layer.borderWidth = 2.0
         deleteButton.layer.borderColor = UIColor.gray.cgColor
+
+        changeStateButton.layer.cornerRadius = 10.0
+        changeStateButton.layer.borderWidth = 2.0
+        changeStateButton.layer.borderColor = UIColor.gray.cgColor
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+
+    @IBAction func changeStateButtonTapped(_ sender: UIButton) {
+        guard let task = task else {
+            return
+        }
+
+        if task.status == 0 {
+            Task.done(id: task.id)
+            navigationController?.popViewController(animated: true)
+        } else {
+            Task.todo(id: task.id)
+            navigationController?.popViewController(animated: true)
+        }
     }
     
     @IBAction func deleteButtonTapped(_ sender: UIButton) {

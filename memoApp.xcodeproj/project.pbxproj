@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0547CE01206A965100B378FC /* ReactorKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0547CE00206A965100B378FC /* ReactorKit.framework */; };
+		0547CE03206A9E6E00B378FC /* ReactorKitRuntime.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0547CE02206A9E6E00B378FC /* ReactorKitRuntime.framework */; };
 		054FEEA020133077000ED097 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054FEE9F20133077000ED097 /* AppDelegate.swift */; };
 		054FEEA220133077000ED097 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054FEEA120133077000ED097 /* ViewController.swift */; };
 		054FEEA520133077000ED097 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 054FEEA320133077000ED097 /* Main.storyboard */; };
@@ -47,6 +49,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0547CE00206A965100B378FC /* ReactorKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactorKit.framework; path = Carthage/Build/iOS/ReactorKit.framework; sourceTree = "<group>"; };
+		0547CE02206A9E6E00B378FC /* ReactorKitRuntime.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactorKitRuntime.framework; path = Carthage/Build/iOS/ReactorKitRuntime.framework; sourceTree = "<group>"; };
 		054FEE9C20133077000ED097 /* memoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = memoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		054FEE9F20133077000ED097 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		054FEEA120133077000ED097 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -80,6 +84,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0547CE03206A9E6E00B378FC /* ReactorKitRuntime.framework in Frameworks */,
+				0547CE01206A965100B378FC /* ReactorKit.framework in Frameworks */,
 				05E9554A20220F8A003DE0C5 /* RxCocoa.framework in Frameworks */,
 				05E9554B20220F8A003DE0C5 /* RxSwift.framework in Frameworks */,
 				054FEED0201395FB000ED097 /* RealmSwift.framework in Frameworks */,
@@ -164,6 +170,8 @@
 		054FEECD201395FA000ED097 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0547CE02206A9E6E00B378FC /* ReactorKitRuntime.framework */,
+				0547CE00206A965100B378FC /* ReactorKit.framework */,
 				05E9554820220F8A003DE0C5 /* RxCocoa.framework */,
 				05E9554920220F8A003DE0C5 /* RxSwift.framework */,
 				054FEECF201395FB000ED097 /* Realm.framework */,
@@ -335,6 +343,8 @@
 				"$(SRCROOT)/Carthage/Build/iOS/RealmSwift.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/RxCocoa.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/RxSwift.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/ReactorKit.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/ReactorKitRuntime.framework",
 			);
 			outputPaths = (
 			);

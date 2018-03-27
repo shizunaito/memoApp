@@ -27,7 +27,7 @@
                         <barButtonItem key="rightBarButtonItem" image="plus" id="agm-2q-Og9">
                             <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
-                                <segue destination="uHg-zz-c8t" kind="presentation" id="Cqo-g3-3z2"/>
+                                <segue destination="PMg-cF-Noa" kind="presentation" id="lio-2B-ieL"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -107,7 +107,7 @@
             </objects>
             <point key="canvasLocation" x="1925.5999999999999" y="356.67166416791605"/>
         </scene>
-        <!--New Task View Controller-->
+        <!--New Task-->
         <scene sceneID="2Py-Y4-KzU">
             <objects>
                 <viewController id="uHg-zz-c8t" customClass="NewTaskViewController" customModule="memoApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -115,43 +115,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nho-Ud-JBY">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New Task" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fg0-Ck-ktU">
-                                        <rect key="frame" x="8" y="31" width="359" height="21"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="21" id="w4b-Lr-ynQ"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uBM-0V-DYD">
-                                        <rect key="frame" x="334" y="26" width="33" height="30"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="30" id="2Rd-gg-P8S"/>
-                                            <constraint firstAttribute="width" constant="33" id="b85-DQ-S2b"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                                        <state key="normal" title="×">
-                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="closeButtonTapped:" destination="uHg-zz-c8t" eventType="touchUpInside" id="edc-en-u8c"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <color key="backgroundColor" red="0.20000000000000001" green="0.59999999999999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstItem="Fg0-Ck-ktU" firstAttribute="leading" secondItem="nho-Ud-JBY" secondAttribute="leading" constant="8" id="PHA-Bu-GyP"/>
-                                    <constraint firstAttribute="bottom" secondItem="uBM-0V-DYD" secondAttribute="bottom" constant="8" id="XQF-Ne-lvC"/>
-                                    <constraint firstAttribute="height" constant="64" id="lFR-6L-Wv3"/>
-                                    <constraint firstAttribute="bottom" secondItem="Fg0-Ck-ktU" secondAttribute="bottom" constant="12" id="oLd-x7-dEj"/>
-                                    <constraint firstAttribute="trailing" secondItem="uBM-0V-DYD" secondAttribute="trailing" constant="8" id="rCb-Fn-JEI"/>
-                                    <constraint firstAttribute="trailing" secondItem="Fg0-Ck-ktU" secondAttribute="trailing" constant="8" id="zJu-sd-edj"/>
-                                </constraints>
-                            </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8BK-vz-1l3">
                                 <rect key="frame" x="16" y="89" width="343" height="21"/>
                                 <constraints>
@@ -188,20 +151,24 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="nho-Ud-JBY" firstAttribute="leading" secondItem="rTD-ZZ-BuH" secondAttribute="leading" id="0S8-N9-Z6E"/>
-                            <constraint firstItem="8BK-vz-1l3" firstAttribute="top" secondItem="nho-Ud-JBY" secondAttribute="bottom" constant="25" id="WbN-fW-lBe"/>
                             <constraint firstItem="fWk-nO-8PG" firstAttribute="centerX" secondItem="rTD-ZZ-BuH" secondAttribute="centerX" id="Xh6-wm-x3X"/>
+                            <constraint firstItem="8BK-vz-1l3" firstAttribute="top" secondItem="rTD-ZZ-BuH" secondAttribute="top" constant="25" id="cRb-t1-3WJ"/>
                             <constraint firstItem="JEp-2L-urk" firstAttribute="leading" secondItem="rTD-ZZ-BuH" secondAttribute="leading" constant="16" id="dG6-4y-Lfx"/>
-                            <constraint firstItem="nho-Ud-JBY" firstAttribute="top" secondItem="X40-tE-YLs" secondAttribute="top" id="fUa-L4-Tap"/>
                             <constraint firstItem="rTD-ZZ-BuH" firstAttribute="trailing" secondItem="8BK-vz-1l3" secondAttribute="trailing" constant="16" id="jRY-zR-GK3"/>
                             <constraint firstItem="JEp-2L-urk" firstAttribute="top" secondItem="8BK-vz-1l3" secondAttribute="bottom" constant="19" id="k8V-TD-bh6"/>
                             <constraint firstItem="8BK-vz-1l3" firstAttribute="leading" secondItem="rTD-ZZ-BuH" secondAttribute="leading" constant="16" id="kQa-h4-7Ay"/>
                             <constraint firstItem="rTD-ZZ-BuH" firstAttribute="trailing" secondItem="JEp-2L-urk" secondAttribute="trailing" constant="16" id="u1e-E5-P0V"/>
                             <constraint firstItem="fWk-nO-8PG" firstAttribute="top" secondItem="JEp-2L-urk" secondAttribute="bottom" constant="24" id="vph-6I-nQ0"/>
-                            <constraint firstItem="nho-Ud-JBY" firstAttribute="trailing" secondItem="rTD-ZZ-BuH" secondAttribute="trailing" id="xdF-NE-PfG"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="rTD-ZZ-BuH"/>
                     </view>
+                    <navigationItem key="navigationItem" title="New Task" id="WLu-iH-lfZ">
+                        <barButtonItem key="rightBarButtonItem" systemItem="stop" id="OrB-fP-xfa">
+                            <connections>
+                                <action selector="closeButtonTapped:" destination="uHg-zz-c8t" id="EJc-Fj-Amb"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="addButton" destination="fWk-nO-8PG" id="jYN-TR-iMz"/>
                         <outlet property="titleTextField" destination="JEp-2L-urk" id="TDL-h0-8tO"/>
@@ -209,7 +176,24 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZTg-6e-QBu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1791" y="-728"/>
+            <point key="canvasLocation" x="2791" y="-510"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="FBf-6a-IIo">
+            <objects>
+                <navigationController id="PMg-cF-Noa" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="PIl-I5-iSn">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.20000000000000001" green="0.59999999999999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="uHg-zz-c8t" kind="relationship" relationship="rootViewController" id="HE6-yB-eZa"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Tr1-p4-7Gw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1926" y="-509"/>
         </scene>
         <!--ToDo-->
         <scene sceneID="PNk-jj-MPQ">

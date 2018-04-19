@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0547CE01206A965100B378FC /* ReactorKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0547CE00206A965100B378FC /* ReactorKit.framework */; };
 		0547CE03206A9E6E00B378FC /* ReactorKitRuntime.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0547CE02206A9E6E00B378FC /* ReactorKitRuntime.framework */; };
+		0547CE05206AA33B00B378FC /* NewTaskViewReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0547CE04206AA33B00B378FC /* NewTaskViewReactor.swift */; };
 		054FEEA020133077000ED097 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054FEE9F20133077000ED097 /* AppDelegate.swift */; };
 		054FEEA220133077000ED097 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054FEEA120133077000ED097 /* ViewController.swift */; };
 		054FEEA520133077000ED097 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 054FEEA320133077000ED097 /* Main.storyboard */; };
@@ -18,6 +19,7 @@
 		054FEEC020133078000ED097 /* memoAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054FEEBF20133078000ED097 /* memoAppUITests.swift */; };
 		054FEED0201395FB000ED097 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 054FEECE201395FB000ED097 /* RealmSwift.framework */; };
 		054FEED1201395FB000ED097 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 054FEECF201395FB000ED097 /* Realm.framework */; };
+		055605CA206B135800D16D6B /* RealmService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 055605C9206B135800D16D6B /* RealmService.swift */; };
 		056C4C692018AA6300B6C173 /* ToDoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 056C4C672018AA6300B6C173 /* ToDoTableViewCell.swift */; };
 		056C4C6A2018AA6300B6C173 /* ToDoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 056C4C682018AA6300B6C173 /* ToDoTableViewCell.xib */; };
 		056C4C6C2018ABFE00B6C173 /* ToDoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 056C4C6B2018ABFE00B6C173 /* ToDoTableViewController.swift */; };
@@ -51,6 +53,7 @@
 /* Begin PBXFileReference section */
 		0547CE00206A965100B378FC /* ReactorKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactorKit.framework; path = Carthage/Build/iOS/ReactorKit.framework; sourceTree = "<group>"; };
 		0547CE02206A9E6E00B378FC /* ReactorKitRuntime.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactorKitRuntime.framework; path = Carthage/Build/iOS/ReactorKitRuntime.framework; sourceTree = "<group>"; };
+		0547CE04206AA33B00B378FC /* NewTaskViewReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTaskViewReactor.swift; sourceTree = "<group>"; };
 		054FEE9C20133077000ED097 /* memoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = memoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		054FEE9F20133077000ED097 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		054FEEA120133077000ED097 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -66,6 +69,7 @@
 		054FEEC120133078000ED097 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		054FEECE201395FB000ED097 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = Carthage/Build/iOS/RealmSwift.framework; sourceTree = "<group>"; };
 		054FEECF201395FB000ED097 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = Carthage/Build/iOS/Realm.framework; sourceTree = "<group>"; };
+		055605C9206B135800D16D6B /* RealmService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmService.swift; sourceTree = "<group>"; };
 		056C4C672018AA6300B6C173 /* ToDoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoTableViewCell.swift; sourceTree = "<group>"; };
 		056C4C682018AA6300B6C173 /* ToDoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ToDoTableViewCell.xib; sourceTree = "<group>"; };
 		056C4C6B2018ABFE00B6C173 /* ToDoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoTableViewController.swift; sourceTree = "<group>"; };
@@ -137,11 +141,12 @@
 				054FEE9F20133077000ED097 /* AppDelegate.swift */,
 				054FEEA120133077000ED097 /* ViewController.swift */,
 				05A0B08E201610E1008962B2 /* Task.swift */,
-				05A0B0902016339F008962B2 /* NewTaskViewController.swift */,
 				056C4C6E2018B9A600B6C173 /* TaskViewController.swift */,
 				054FEEA320133077000ED097 /* Main.storyboard */,
+				055605CB206B1C7600D16D6B /* NewTask */,
 				056C4C6D2018B92000B6C173 /* ToDo */,
 				05A35D29202094880041B43A /* Done */,
+				055605CC206B1C9100D16D6B /* Services */,
 				054FEEA620133077000ED097 /* Assets.xcassets */,
 				054FEEA820133077000ED097 /* LaunchScreen.storyboard */,
 				054FEEAB20133077000ED097 /* Info.plist */,
@@ -178,6 +183,23 @@
 				054FEECE201395FB000ED097 /* RealmSwift.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		055605CB206B1C7600D16D6B /* NewTask */ = {
+			isa = PBXGroup;
+			children = (
+				05A0B0902016339F008962B2 /* NewTaskViewController.swift */,
+				0547CE04206AA33B00B378FC /* NewTaskViewReactor.swift */,
+			);
+			path = NewTask;
+			sourceTree = "<group>";
+		};
+		055605CC206B1C9100D16D6B /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				055605C9206B135800D16D6B /* RealmService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 		056C4C6D2018B92000B6C173 /* ToDo */ = {
@@ -360,6 +382,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				054FEEA220133077000ED097 /* ViewController.swift in Sources */,
+				055605CA206B135800D16D6B /* RealmService.swift in Sources */,
+				0547CE05206AA33B00B378FC /* NewTaskViewReactor.swift in Sources */,
 				056C4C6F2018B9A600B6C173 /* TaskViewController.swift in Sources */,
 				056C4C6C2018ABFE00B6C173 /* ToDoTableViewController.swift in Sources */,
 				05A0B08F201610E1008962B2 /* Task.swift in Sources */,

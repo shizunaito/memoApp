@@ -144,9 +144,6 @@
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
                                 <state key="disabled" backgroundImage="addTaskDisable"/>
-                                <connections>
-                                    <action selector="addButtonTapped:" destination="uHg-zz-c8t" eventType="touchUpInside" id="OR6-E2-HNU"/>
-                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>

@@ -1,3 +1,4 @@
 github "realm/realm-cocoa" "master"
 github "ReactorKit/ReactorKit"
+github "ReactiveX/RxSwift" ~> 4.0
 

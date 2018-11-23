@@ -11,11 +11,13 @@ import RealmSwift
 import RxSwift
 import RxCocoa
 import ReactorKit
+import GoogleMobileAds
 
 final class NewTaskViewController: UIViewController, StoryboardView {
 
     @IBOutlet weak var addButton: UIButton!
     @IBOutlet weak var titleTextField: UITextField!
+    @IBOutlet weak var bannerView: GADBannerView!
 
     var disposeBag = DisposeBag()
 
@@ -25,6 +27,13 @@ final class NewTaskViewController: UIViewController, StoryboardView {
         addButton.setTitleColor(UIColor.lightGray, for: .disabled)
         self.reactor = NewTaskViewReactor(realmService: RealmService())
         titleTextField.becomeFirstResponder()
+
+        let env = ProcessInfo.processInfo.environment
+        if let id = env["adTest"] {
+            bannerView.adUnitID = id
+        }
+        bannerView.rootViewController = self
+        bannerView.load(GADRequest())
     }
 
     func bind(reactor: NewTaskViewReactor) {

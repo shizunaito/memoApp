@@ -23,6 +23,7 @@
 		05699743219D8EE900AC36A5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 05699742219D8EE900AC36A5 /* GoogleService-Info.plist */; };
 		05699744219D8EE900AC36A5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 05699742219D8EE900AC36A5 /* GoogleService-Info.plist */; };
 		05699745219D8EE900AC36A5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 05699742219D8EE900AC36A5 /* GoogleService-Info.plist */; };
+		0569974721A837C100AC36A5 /* UIExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0569974621A837C100AC36A5 /* UIExtensions.swift */; };
 		056C4C692018AA6300B6C173 /* ToDoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 056C4C672018AA6300B6C173 /* ToDoTableViewCell.swift */; };
 		056C4C6A2018AA6300B6C173 /* ToDoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 056C4C682018AA6300B6C173 /* ToDoTableViewCell.xib */; };
 		056C4C6C2018ABFE00B6C173 /* ToDoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 056C4C6B2018ABFE00B6C173 /* ToDoTableViewController.swift */; };
@@ -77,6 +78,7 @@
 		054FEECF201395FB000ED097 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = Carthage/Build/iOS/Realm.framework; sourceTree = "<group>"; };
 		055605C9206B135800D16D6B /* RealmService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmService.swift; sourceTree = "<group>"; };
 		05699742219D8EE900AC36A5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		0569974621A837C100AC36A5 /* UIExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIExtensions.swift; sourceTree = "<group>"; };
 		056C4C672018AA6300B6C173 /* ToDoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoTableViewCell.swift; sourceTree = "<group>"; };
 		056C4C682018AA6300B6C173 /* ToDoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ToDoTableViewCell.xib; sourceTree = "<group>"; };
 		056C4C6B2018ABFE00B6C173 /* ToDoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoTableViewController.swift; sourceTree = "<group>"; };
@@ -170,6 +172,7 @@
 				054FEEA620133077000ED097 /* Assets.xcassets */,
 				054FEEA820133077000ED097 /* LaunchScreen.storyboard */,
 				05699742219D8EE900AC36A5 /* GoogleService-Info.plist */,
+				0569974821A837CB00AC36A5 /* Extensions */,
 				054FEEAB20133077000ED097 /* Info.plist */,
 			);
 			path = memoApp;
@@ -224,6 +227,14 @@
 				055605C9206B135800D16D6B /* RealmService.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		0569974821A837CB00AC36A5 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				0569974621A837C100AC36A5 /* UIExtensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		056C4C6D2018B92000B6C173 /* ToDo */ = {
@@ -518,6 +529,7 @@
 				054FEEA220133077000ED097 /* ViewController.swift in Sources */,
 				055605CA206B135800D16D6B /* RealmService.swift in Sources */,
 				0547CE05206AA33B00B378FC /* NewTaskViewReactor.swift in Sources */,
+				0569974721A837C100AC36A5 /* UIExtensions.swift in Sources */,
 				056C4C6F2018B9A600B6C173 /* TaskViewController.swift in Sources */,
 				056C4C6C2018ABFE00B6C173 /* ToDoTableViewController.swift in Sources */,
 				05A0B08F201610E1008962B2 /* Task.swift in Sources */,

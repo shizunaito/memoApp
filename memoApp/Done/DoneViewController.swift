@@ -28,6 +28,7 @@ class DoneViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationController?.navigationBar.withoutUnderline()
 
         tableView.delegate = self
         tableView.dataSource = self

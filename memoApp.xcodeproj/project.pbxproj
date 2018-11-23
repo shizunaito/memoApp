@@ -29,7 +29,7 @@
 		056C4C6F2018B9A600B6C173 /* TaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 056C4C6E2018B9A600B6C173 /* TaskViewController.swift */; };
 		05A0B08F201610E1008962B2 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A0B08E201610E1008962B2 /* Task.swift */; };
 		05A0B0912016339F008962B2 /* NewTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A0B0902016339F008962B2 /* NewTaskViewController.swift */; };
-		05A35D2B202094A50041B43A /* DoneTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A35D2A202094A50041B43A /* DoneTableViewController.swift */; };
+		05A35D2B202094A50041B43A /* DoneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A35D2A202094A50041B43A /* DoneViewController.swift */; };
 		05A35D30202094C90041B43A /* DoneTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A35D2E202094C90041B43A /* DoneTableViewCell.swift */; };
 		05A35D31202094C90041B43A /* DoneTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 05A35D2F202094C90041B43A /* DoneTableViewCell.xib */; };
 		05E9554A20220F8A003DE0C5 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05E9554820220F8A003DE0C5 /* RxCocoa.framework */; };
@@ -83,7 +83,7 @@
 		056C4C6E2018B9A600B6C173 /* TaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskViewController.swift; sourceTree = "<group>"; };
 		05A0B08E201610E1008962B2 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 		05A0B0902016339F008962B2 /* NewTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTaskViewController.swift; sourceTree = "<group>"; };
-		05A35D2A202094A50041B43A /* DoneTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoneTableViewController.swift; sourceTree = "<group>"; };
+		05A35D2A202094A50041B43A /* DoneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoneViewController.swift; sourceTree = "<group>"; };
 		05A35D2E202094C90041B43A /* DoneTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoneTableViewCell.swift; sourceTree = "<group>"; };
 		05A35D2F202094C90041B43A /* DoneTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DoneTableViewCell.xib; sourceTree = "<group>"; };
 		05E9554820220F8A003DE0C5 /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
@@ -239,7 +239,7 @@
 		05A35D29202094880041B43A /* Done */ = {
 			isa = PBXGroup;
 			children = (
-				05A35D2A202094A50041B43A /* DoneTableViewController.swift */,
+				05A35D2A202094A50041B43A /* DoneViewController.swift */,
 				05A35D2E202094C90041B43A /* DoneTableViewCell.swift */,
 				05A35D2F202094C90041B43A /* DoneTableViewCell.xib */,
 			);
@@ -522,7 +522,7 @@
 				056C4C6C2018ABFE00B6C173 /* ToDoTableViewController.swift in Sources */,
 				05A0B08F201610E1008962B2 /* Task.swift in Sources */,
 				05A0B0912016339F008962B2 /* NewTaskViewController.swift in Sources */,
-				05A35D2B202094A50041B43A /* DoneTableViewController.swift in Sources */,
+				05A35D2B202094A50041B43A /* DoneViewController.swift in Sources */,
 				054FEEA020133077000ED097 /* AppDelegate.swift in Sources */,
 				05A35D30202094C90041B43A /* DoneTableViewCell.swift in Sources */,
 				056C4C692018AA6300B6C173 /* ToDoTableViewCell.swift in Sources */,

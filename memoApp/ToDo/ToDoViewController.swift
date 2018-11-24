@@ -14,7 +14,10 @@ import RxCocoa
 class ToDoViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var addTaskButton: UIBarButtonItem!
+
+    let addTaskButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "add"), style: .plain, target: self, action: nil)
+    let okButtonItem = UIBarButtonItem(title: "OK", style: .plain, target: self, action: nil)
+    let cancelButtonItem = UIBarButtonItem(title: "キャンセル", style: .plain, target: self, action: nil)
 
     private var tasks: Results<Task>?{
         do{
@@ -39,11 +42,18 @@ class ToDoViewController: UIViewController {
         tableView.register(UINib(nibName: "ToDoTableViewCell", bundle: nil), forCellReuseIdentifier: "toDoTableViewCell")
         tableView.register(UINib(nibName: "AddTaskTableViewCell", bundle: nil), forCellReuseIdentifier: "AddTaskTableViewCell")
 
-        addTaskButton.rx.tap
-            .map { [weak self] _ in
-                guard let self = self else { return false }
-                return !self.isEditting.value
-            }
+        addTaskButtonItem.rx.tap
+            .map { _ in true }
+            .bind(to: isEditting)
+            .disposed(by: disposeBag)
+
+        cancelButtonItem.rx.tap
+            .map { _ in false }
+            .bind(to: isEditting)
+            .disposed(by: disposeBag)
+
+        okButtonItem.rx.tap
+            .map { _ in false }
             .bind(to: isEditting)
             .disposed(by: disposeBag)
 
@@ -60,6 +70,17 @@ class ToDoViewController: UIViewController {
                     self.tableView.deleteRows(at: [IndexPath(row: 0, section: 0)], with: .top)
                 }
                 self.tableView.endUpdates()
+            })
+            .disposed(by: disposeBag)
+
+        isEditting.asObservable()
+            .distinctUntilChanged()
+            .subscribe(onNext: { [weak self] isEditing in
+                guard let self = self else { return }
+                let rightButtons = isEditing ? [self.okButtonItem] : [self.addTaskButtonItem]
+                let leftButtons = isEditing ? [self.cancelButtonItem] : []
+                self.navigationItem.setRightBarButtonItems(rightButtons, animated: true)
+                self.navigationItem.setLeftBarButtonItems(leftButtons, animated: true)
             })
             .disposed(by: disposeBag)
 

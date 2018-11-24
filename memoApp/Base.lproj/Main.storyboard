@@ -264,11 +264,8 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="vy8-dS-Inr"/>
                     </view>
-                    <navigationItem key="navigationItem" id="eNC-MW-D1C">
-                        <barButtonItem key="rightBarButtonItem" image="add" id="pmq-H6-O60"/>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" id="eNC-MW-D1C"/>
                     <connections>
-                        <outlet property="addTaskButton" destination="pmq-H6-O60" id="fSp-CY-wmk"/>
                         <outlet property="tableView" destination="c3P-bA-Lv0" id="9m0-A7-bmK"/>
                     </connections>
                 </viewController>
@@ -365,7 +362,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="add" width="34" height="34"/>
         <image name="addTaskAble" width="178" height="62"/>
         <image name="addTaskDisable" width="177" height="62"/>
         <image name="done" width="25" height="25"/>

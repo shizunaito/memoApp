@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -20,10 +20,10 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uWJ-oI-OFI">
-                        <rect key="frame" x="9" y="18" width="24" height="24"/>
+                        <rect key="frame" x="16" y="19" width="22" height="22"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="24" id="EvL-AC-vJh"/>
-                            <constraint firstAttribute="width" constant="24" id="QF9-L5-fWF"/>
+                            <constraint firstAttribute="height" constant="22" id="EvL-AC-vJh"/>
+                            <constraint firstAttribute="width" constant="22" id="QF9-L5-fWF"/>
                         </constraints>
                         <state key="normal" image="check"/>
                         <connections>
@@ -31,21 +31,21 @@
                         </connections>
                     </button>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.69999999999999996" translatesAutoresizingMaskIntoConstraints="NO" id="iXe-rE-msT">
-                        <rect key="frame" x="41" y="19" width="263" height="21"/>
+                        <rect key="frame" x="44" y="19.5" width="260" height="21"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="21" id="YFX-CU-g0v"/>
                         </constraints>
-                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                        <nil key="textColor"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                        <color key="textColor" red="0.47058823529999999" green="0.49019607840000001" blue="0.47058823529999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
                 <constraints>
                     <constraint firstAttribute="trailing" secondItem="iXe-rE-msT" secondAttribute="trailing" constant="16" id="VQs-Ky-dvZ"/>
                     <constraint firstItem="uWJ-oI-OFI" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="Vhk-1n-jeQ"/>
-                    <constraint firstItem="iXe-rE-msT" firstAttribute="leading" secondItem="uWJ-oI-OFI" secondAttribute="trailing" constant="8" id="cFa-KO-TCJ"/>
+                    <constraint firstItem="iXe-rE-msT" firstAttribute="leading" secondItem="uWJ-oI-OFI" secondAttribute="trailing" constant="6" id="cFa-KO-TCJ"/>
                     <constraint firstItem="iXe-rE-msT" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="tZi-aP-2Cj"/>
-                    <constraint firstItem="uWJ-oI-OFI" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="9" id="yZl-m6-1Sb"/>
+                    <constraint firstItem="uWJ-oI-OFI" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="yZl-m6-1Sb"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>

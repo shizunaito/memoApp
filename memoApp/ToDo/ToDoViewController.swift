@@ -14,6 +14,7 @@ import RxCocoa
 class ToDoViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var addTaskButton: UIBarButtonItem!
 
     private var tasks: Results<Task>?{
         do{
@@ -23,6 +24,8 @@ class ToDoViewController: UIViewController {
         }
         return nil
     }
+
+    private var isEditting = Variable<Bool>(false)
 
     private var disposeBag = DisposeBag()
 
@@ -34,12 +37,32 @@ class ToDoViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(UINib(nibName: "ToDoTableViewCell", bundle: nil), forCellReuseIdentifier: "toDoTableViewCell")
-    }
+        tableView.register(UINib(nibName: "AddTaskTableViewCell", bundle: nil), forCellReuseIdentifier: "AddTaskTableViewCell")
 
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
+        addTaskButton.rx.tap
+            .map { [weak self] _ in
+                guard let self = self else { return false }
+                return !self.isEditting.value
+            }
+            .bind(to: isEditting)
+            .disposed(by: disposeBag)
 
-        tableView.reloadData()
+        isEditting.asObservable()
+            .distinctUntilChanged()
+            .skip(1)
+            .subscribe(onNext: { [weak self] isEditing in
+                guard let self = self else { return }
+                self.tableView.beginUpdates()
+
+                if isEditing {
+                    self.tableView.insertRows(at: [IndexPath(row: 0, section: 0)], with: .top)
+                } else {
+                    self.tableView.deleteRows(at: [IndexPath(row: 0, section: 0)], with: .top)
+                }
+                self.tableView.endUpdates()
+            })
+            .disposed(by: disposeBag)
+
     }
 
     override func didReceiveMemoryWarning() {
@@ -67,16 +90,22 @@ extension ToDoViewController: UITableViewDataSource, UITableViewDelegate {
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return tasks?.count ?? 0
+        let editCellCount = isEditting.value ? 1 : 0
+        return (tasks?.count ?? 0) + editCellCount
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "toDoTableViewCell", for: indexPath) as? ToDoTableViewCell, let tasks = tasks else {
+        if let cell = tableView.dequeueReusableCell(withIdentifier: "AddTaskTableViewCell", for: indexPath) as? AddTaskTableViewCell, indexPath.row == 0 && isEditting.value {
+            cell.textField.text = ""
+            return cell
+        }
+
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "toDoTableViewCell", for: indexPath) as? ToDoTableViewCell, let task = tasks?[indexPath.row] else {
             return UITableViewCell()
         }
 
-        cell.task = tasks[indexPath.row]
-        cell.titleLabel.text = tasks[indexPath.row].title
+        cell.task = task
+        cell.titleLabel.text = task.title
 
         cell.checkButton.rx.tap
             .subscribe { _ in
@@ -123,6 +152,5 @@ extension ToDoViewController: UITableViewDataSource, UITableViewDelegate {
      */
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        performSegue(withIdentifier: "toTaskViewController", sender: indexPath.row)
     }
 }

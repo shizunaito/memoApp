@@ -26,7 +26,7 @@
 		0569974721A837C100AC36A5 /* UIExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0569974621A837C100AC36A5 /* UIExtensions.swift */; };
 		056C4C692018AA6300B6C173 /* ToDoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 056C4C672018AA6300B6C173 /* ToDoTableViewCell.swift */; };
 		056C4C6A2018AA6300B6C173 /* ToDoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 056C4C682018AA6300B6C173 /* ToDoTableViewCell.xib */; };
-		056C4C6C2018ABFE00B6C173 /* ToDoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 056C4C6B2018ABFE00B6C173 /* ToDoTableViewController.swift */; };
+		056C4C6C2018ABFE00B6C173 /* ToDoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 056C4C6B2018ABFE00B6C173 /* ToDoViewController.swift */; };
 		056C4C6F2018B9A600B6C173 /* TaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 056C4C6E2018B9A600B6C173 /* TaskViewController.swift */; };
 		05A0B08F201610E1008962B2 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A0B08E201610E1008962B2 /* Task.swift */; };
 		05A0B0912016339F008962B2 /* NewTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A0B0902016339F008962B2 /* NewTaskViewController.swift */; };
@@ -81,7 +81,7 @@
 		0569974621A837C100AC36A5 /* UIExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIExtensions.swift; sourceTree = "<group>"; };
 		056C4C672018AA6300B6C173 /* ToDoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoTableViewCell.swift; sourceTree = "<group>"; };
 		056C4C682018AA6300B6C173 /* ToDoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ToDoTableViewCell.xib; sourceTree = "<group>"; };
-		056C4C6B2018ABFE00B6C173 /* ToDoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoTableViewController.swift; sourceTree = "<group>"; };
+		056C4C6B2018ABFE00B6C173 /* ToDoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoViewController.swift; sourceTree = "<group>"; };
 		056C4C6E2018B9A600B6C173 /* TaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskViewController.swift; sourceTree = "<group>"; };
 		05A0B08E201610E1008962B2 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 		05A0B0902016339F008962B2 /* NewTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTaskViewController.swift; sourceTree = "<group>"; };
@@ -240,7 +240,7 @@
 		056C4C6D2018B92000B6C173 /* ToDo */ = {
 			isa = PBXGroup;
 			children = (
-				056C4C6B2018ABFE00B6C173 /* ToDoTableViewController.swift */,
+				056C4C6B2018ABFE00B6C173 /* ToDoViewController.swift */,
 				056C4C672018AA6300B6C173 /* ToDoTableViewCell.swift */,
 				056C4C682018AA6300B6C173 /* ToDoTableViewCell.xib */,
 			);
@@ -531,7 +531,7 @@
 				0547CE05206AA33B00B378FC /* NewTaskViewReactor.swift in Sources */,
 				0569974721A837C100AC36A5 /* UIExtensions.swift in Sources */,
 				056C4C6F2018B9A600B6C173 /* TaskViewController.swift in Sources */,
-				056C4C6C2018ABFE00B6C173 /* ToDoTableViewController.swift in Sources */,
+				056C4C6C2018ABFE00B6C173 /* ToDoViewController.swift in Sources */,
 				05A0B08F201610E1008962B2 /* Task.swift in Sources */,
 				05A0B0912016339F008962B2 /* NewTaskViewController.swift in Sources */,
 				05A35D2B202094A50041B43A /* DoneViewController.swift in Sources */,

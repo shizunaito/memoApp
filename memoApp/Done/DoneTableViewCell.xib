@@ -20,18 +20,18 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uWJ-oI-OFI">
-                        <rect key="frame" x="16" y="19" width="22" height="22"/>
+                        <rect key="frame" x="10" y="13" width="34" height="34"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="22" id="EvL-AC-vJh"/>
-                            <constraint firstAttribute="width" constant="22" id="QF9-L5-fWF"/>
+                            <constraint firstAttribute="height" constant="34" id="EvL-AC-vJh"/>
+                            <constraint firstAttribute="width" constant="34" id="QF9-L5-fWF"/>
                         </constraints>
                         <state key="normal" image="check"/>
                         <connections>
                             <action selector="checkButtonTapped:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="r3F-ZE-ao3"/>
                         </connections>
                     </button>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.69999999999999996" translatesAutoresizingMaskIntoConstraints="NO" id="iXe-rE-msT">
-                        <rect key="frame" x="44" y="19.5" width="260" height="21"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.69999999999999996" translatesAutoresizingMaskIntoConstraints="NO" id="iXe-rE-msT">
+                        <rect key="frame" x="49" y="19.5" width="254" height="21"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="21" id="YFX-CU-g0v"/>
                         </constraints>
@@ -43,9 +43,9 @@
                 <constraints>
                     <constraint firstAttribute="trailing" secondItem="iXe-rE-msT" secondAttribute="trailing" constant="16" id="VQs-Ky-dvZ"/>
                     <constraint firstItem="uWJ-oI-OFI" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="Vhk-1n-jeQ"/>
-                    <constraint firstItem="iXe-rE-msT" firstAttribute="leading" secondItem="uWJ-oI-OFI" secondAttribute="trailing" constant="6" id="cFa-KO-TCJ"/>
+                    <constraint firstItem="iXe-rE-msT" firstAttribute="leading" secondItem="uWJ-oI-OFI" secondAttribute="trailing" constant="5" id="cFa-KO-TCJ"/>
                     <constraint firstItem="iXe-rE-msT" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="tZi-aP-2Cj"/>
-                    <constraint firstItem="uWJ-oI-OFI" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="yZl-m6-1Sb"/>
+                    <constraint firstItem="uWJ-oI-OFI" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="yZl-m6-1Sb"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
@@ -56,6 +56,6 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="check" width="24" height="24"/>
+        <image name="check" width="34" height="34"/>
     </resources>
 </document>

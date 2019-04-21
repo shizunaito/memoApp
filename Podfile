@@ -6,6 +6,9 @@ target 'memoApp' do
   use_frameworks!
 
   # Pods for memoApp
+  pod 'ReactorKit'
+  pod 'RxCocoa'
+  pod 'RealmSwift'
   pod 'Firebase/Core'
   pod 'Firebase/AdMob'
   target 'memoAppTests' do
